@@ -1,0 +1,65 @@
+
+.wrapper{
+	widows: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+.textBox{
+	position: relative;
+	top: 50%;
+	transform: translateY(-70%);
+	text-align: center;
+}
+
+.linkToLog{
+	position: relative;
+	top: 50%;
+	color: #5CB85C;
+	font-size: 2rem;
+	margin: 50px;
+	opacity: 0;
+}
+.linkToLog:hover{
+	text-decoration: none;
+	color: #5CB85C;
+	border-bottom: 2px solid #5CB85C;
+	transition: 0.2s;
+}
+.titleList{
+	width: 100%;
+	list-style-type: none;
+	position: relative;
+}
+.titleItems{
+	float: left;
+	width: 11.1%;
+	float: left;
+	color: #5CB85C;
+	font-size: 9rem;
+}
+.item1{
+	padding-top: 40%;
+}
+
+
+@media (max-width: 1020px) {
+	.titleItems{
+		font-size: 6rem;
+	}
+}
+
+@media (max-width: 773px) {
+	.titleItems{
+		font-size: 4rem;
+	}
+}
+
+@media (max-width: 470px) {
+	.titleItems{
+		font-size: 2rem;
+	}
+	.linkToLog{
+		font-size: 1.5rem;
+		margin: 20px;
+	}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TreeBoard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/intro.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway|Roboto" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="textBox container noselect">
+			<!-- <h1 class="title">T</h1>
+			<h1 class="title">R</h1>
+			<h1 class="title">E</h1>
+			<h1 class="title">E</h1>
+			<h1 class="title">B</h1>
+			<h1 class="title">O</h1>
+			<h1 class="title">A</h1>
+			<h1 class="title">R</h1>
+			<h1 class="title">D</h1> -->
+			<div id="svgAttributes"> <svg width="200" height="200" viewBox="0 0 128 128">
+			  <polygon points="64 68.69214946564094 8.574 99.99648588506463 63.397793371316546 67.64865409477648 64 3.9964858850646263 64.60220662868346 67.64865409477648 119.426 99.99648588506463 " fill="#5CB85C"></polygon>
+			</svg> </div>
+			<div class="titleList">
+				<div class="titleItems item1">T</div>
+				<div class="titleItems item2">R</div>
+				<div class="titleItems item1">E</div>
+				<div class="titleItems item2">E</div>
+				<div class="titleItems item1">B</div>
+				<div class="titleItems item2">O</div>
+				<div class="titleItems item1">A</div>
+				<div class="titleItems item2">R</div>
+				<div class="titleItems item1">D</div>
+			</div>
+			<a href="/login" class="linkToLog">Login</a>
+			<a href="/signup" class="linkToLog">Register</a>
+		</div>
+	</div>
+	<script src="./scripts/intro.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+body{
+	background-color: #f7f7f7;
+}
+.greenColor{
+  color: #5CB85C;
+}
+
+.navList{
+	height: 50px;
+  list-style-type: none;
+  width: 100%;
+  color: white;
+  background-color: #5CB85C;
+}
+.navItem{
+	float: left;
+	width: 20%;
+	text-align: center;
+	line-height: 50px;
+}
+.navBar{
+	width: 100%;
+	position: fixed;
+	z-index: 2;
+}
+
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+.navLink{
+	color: white;
+}
+.navLink:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.sidePrList{
+	list-style-type: none;
+	background-color: white;
+	border-radius: 5px;
+	padding: 5px;
+}
+.profLink{
+	color: #5CB85C;
+}
+.profLink:hover{
+	color: #5CB85C;
+	text-decoration: none;
+}
+.screen{
+	
+}
+.board{
+	float: right;
+	height: calc(100vh - 75px);
+	overflow: scroll;
+}
+.sidePrPic{
+	width: 100%;
+}
+
+.post{
+	width: 100%;
+	border-radius: 5px;
+	background-color: white;
+}
+.postHead{
+	font-size: 1.2rem;
+	color: #5CB85C;
+	padding: 10px;
+}
+.postContent{
+	padding: 10px;
+}
+.postImg{
+	width: 100%;
+	padding: 10px;
+	margin: auto;
+}
+.PostedImg{
+	width: 100%;
+	
+}
+
+.postLikes{
+	padding: 10px;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.thumbs{
+	cursor: pointer;
+}
+
+.sidePrLink{
+	color: black;
+}
+.sidePrLink:hover{
+	text-decoration: none;
+}
+
+.full{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 4;
+	display:flex;justify-content:center;align-items:center;
+}
+.modalImg{
+	background-color: white;
+	margin: 2%;
+}
+.imgInModal{
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 990px) {
+	.screen{
+		display: none;
+	}
+}

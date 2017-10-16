@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SignUp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/board.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+	
+		<nav class="navBar">
+			<ul class="navList">
+				<li class="navItem"><a href="/board" class="navLink">Board</a> </li>
+				<li class="navItem"><a href="/profile" class="navLink">Profile</a> </li>
+				<li class="navItem"><a href="/" class="navLink">TREEBOARD</a> </li>
+				<li class="navItem"><a href="/search" class="navLink">Search</a> </li>
+				<li class="navItem"><a href="/logout" class="navLink">Log Out</a> </li>
+			</ul>
+		</nav>
+
+		<div class="full d-none">
+			<div class="modalImg">
+				<img src="http://sqwanjia.net/data/out/35/38961473-color-picker.jpg" class="imgInModal">
+			</div>
+		</div>
+
+
+		<div class="col-lg-12 pt-3"></div>
+
+		
+		<div class="container pt-5">
+			
+			<div class=" screen col-lg-4 float-left">
+				{{#user}}
+				<ul class="sidePrList mt-2">
+					<li class="sidePrList"><img src="{{profile_pic}}" class="sidePrPic"></li>
+					<li class="sidePrList"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+						{{first_name}}</li>
+					<li class="sidePrList"><i class="fa fa-user-circle" aria-hidden="true"></i>
+						{{last_name}}</li>
+					<li class="sidePrList"><i class="fa fa-user" aria-hidden="true"></i>
+						<a href="/profile" class="profLink">profile</a></li>
+				</ul>
+				{{/user}}
+			</div>
+			<div class="board col-lg-8">
+				
+				{{#posts}}
+				<div class="post mt-2">
+					<div class="postHead"><a href="/profile/{{first_name}}/{{last_name}}" class="profLink"> {{first_name}} {{last_name}} </a></div>
+					<div class="postContent">{{text}}</div>
+					<div class="postImg"><img src="{{imgs}}" class="PostedImg"></div>
+					<div class="postLikes noselect">
+						<i class="fa fa-thumbs-o-up thumbs like" data-id="{{id}}" aria-hidden="true"></i>&nbsp;	{{likes}} likes&nbsp;	&nbsp;
+						<i class="fa fa-thumbs-o-down thumbs dislike" data-id="{{id}} aria-hidden="true"></i>&nbsp;	{{dislikes}} dislikes
+					</div>
+				</div>
+				{{/posts}}
+			</div>
+
+		</div>
+		
+	<script src="scripts/polygon.js"></script>
+	<script src="scripts/board.js"></script>
+</body>
+</html>

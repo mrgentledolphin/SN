@@ -1,0 +1,52 @@
+body{
+	color: #5CB85C;
+	font-size: 1.2rem;
+}
+
+.signupForm{
+	width: 100%;
+
+}
+
+
+.formStyle:focus{
+	transition: .7s;		
+	outline-color: transparent;
+  	outline-style: none;
+}
+.formStyle{
+	color: #5CB85C;
+	width: 100%;
+	border: 0;
+	border-bottom: 1px solid rgba(79, 224, 71, 0.2); 
+}
+label{
+	width: 100%;
+}
+
+.signButton{
+	color: white;
+}
+
+
+.logoSign{
+	width: 100%;
+}
+
+.logoDiv{
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+@-webkit-keyframes autofill {
+    to {
+        color: #5CB85C;
+        background: transparent;
+    }
+}
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}

@@ -1,0 +1,28 @@
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Lato', sans-serif;
+green text: #5CB85C
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: font-family: 'Raleway', sans-serif;
+}
+
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.greenBack{
+  background-color: #5CB85C;
+}
