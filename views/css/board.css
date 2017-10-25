@@ -123,6 +123,37 @@ ul{
 	height: 100%;
 }
 
+
+
+.addPost{
+	background-color: white;
+	border-radius: 5px;
+}
+.addPostForm{
+	
+}
+.addPostTextArea{
+	width: 96%;
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.addPostSub{
+	background-color: #5CB85C;
+	color: white;
+	margin-left: 2%;
+	margin-bottom: 2%;
+}
+.addPostImg{
+	margin: 2%;
+	width: 96%;
+}
+
+
+
+
 @media (max-width: 990px) {
 	.screen{
 		display: none;

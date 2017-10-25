@@ -49,4 +49,15 @@ $(function(){
 			}
 		})
 	})
+	$('.dislike').on('click', function() {
+		let postId = $(this).attr('data-id');
+
+		$.ajax({
+			type: 'POST',
+			url: '/addDislike/' + postId,
+			success: function(data) {
+				console.log(data);
+			}
+		})
+	})
 })

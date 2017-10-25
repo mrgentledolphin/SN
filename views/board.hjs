@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>SignUp</title>
+	<title>TreeBoard</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<script
@@ -56,6 +56,14 @@
 			</div>
 			<div class="board col-lg-8">
 				
+				<div class="addPost mt-2">
+					<form action="/addPost" method="post" class="addPostForm">
+						<textarea name="text" class="addPostTextArea" placeholder="Insert post's text here..."></textarea>
+						<input type="text" name="img" class="form-control addPostImg" placeholder="Image URL..">
+						<input type="submit" class="btn addPostSub" value="Publish">
+					</form>
+				</div>
+
 				{{#posts}}
 				<div class="post mt-2">
 					<div class="postHead"><a href="/profile/{{first_name}}/{{last_name}}" class="profLink"> {{first_name}} {{last_name}} </a></div>
