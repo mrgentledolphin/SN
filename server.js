@@ -25,6 +25,7 @@ express()
        res.render('index')
     })
 
+    
     .get('/login', (req, res, next) => {
         res.render('login')
     })
@@ -53,11 +54,13 @@ express()
                     .where("id", pass.user)
                     .first()
                     .then((user) => {
+                        let userId = user.id
                         req.session.first_name = user.first_name
                         req.session.last_name = user.last_name
                         res.render('board', {
                             user,
-                            posts
+                            posts,
+                            profileLinkId: userId
                         })
                     })
             })
@@ -93,7 +96,32 @@ express()
             res.redirect("/")
         })
     })
-
+    .post('/updatePass', (req, res, next) => {
+        let old = req.body.old
+        let password = req.body.password
+        let password2 = req.body.password2
+        let passport = req.session.passport
+        let accountId = passport.user
+        console.log(password, password2, accountId)
+        db('users')
+            .where('id', accountId)
+            .first()
+            .then((user) => {
+                if ( user.password === old && password === password2) {
+                    db('users')
+                    .where('id', accountId)
+                    .first()
+                    .update({'password': password})
+                    .then((id) => {
+                        console.log(id)
+                        res.render('success')
+                    })
+                } else {
+                    res.render('failure')
+                }
+        })
+        
+    })
     .post('/addLike/:id', (req, res, next) => {
         let postId = req.params.id
         console.log(postId)
@@ -130,23 +158,71 @@ express()
     })
 
     .post('/addPost', (req, res, next) => {
+        let passport = req.session.passport
         let post = {
             text: req.body.text,
             imgs: req.body.img,
             likes: 0,
             dislikes: 0,
             first_name: req.session.first_name,
-            last_name: req.session.last_name
+            last_name: req.session.last_name,
+            userId: passport.user
         }
 
         db('posts')
             .insert(post)
             .then((postId) => {
                 console.log(postId)
+                res.redirect('/board')
             })
             
     })
+    .get('/profile', (req, res, next) => {
+        let passport = req.session.passport
+        let profileId = passport.user
 
+        db('users')
+            .where('id', profileId)
+            .first()
+            .then((user) => {
+                db('posts')
+                    .where('last_name', user.last_name)
+                    .then((post) => {
+                        res.render('profile', {
+                            user,
+                            post
+                        })
+                    })
+            })
+    })
+    .get('/profile/:id', (req, res, next) => {
+        let profileId = req.params.id
+        db('users')
+            .where('id', profileId)
+            .first()
+            .then((user) => {
+                db('posts')
+                    .where('last_name', user.last_name)
+                    .then((post) => {
+                        res.render('profile', {
+                            user,
+                            post
+                        })
+                    })
+            })
+    })
+    // 404 error
+    .use(function(req, res, next){
+        res.status(404)
+        if (req.accepts('html')) {
+            res.render('404', {url: req. url})
+            return
+        }
+        if (req.accepts('json')) {
+            res.send({ error: 'Not Found! 404!'})
+        }
+        res.type('txt').send('Not Found!')
+    })
     .listen(3000)
 
 

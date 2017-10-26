@@ -1,0 +1,52 @@
+.profilePic{
+	width: 100%;
+	padding: 10px;
+}
+body{
+	background-color: #f7f7f7;
+}
+
+.pane{
+	background-color: #fff;
+	border-radius: 5px;
+	background-color: white;
+	float: left;
+	margin: 1%;
+}
+.profileImg{
+	width: 33%;
+}
+.profileInfo{
+	width: 63%;
+}
+
+.mailLink:hover{
+	text-decoration: none;
+}
+
+.passInps{
+	width: 98%;
+	margin: 1%;
+}
+
+@media (max-width: 800px){
+	.mail{
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 720px){
+	.mail{
+		font-size: 1.2rem;
+	}
+	.profileImg{
+		width: 98%;
+	}
+	.profileInfo{
+		width: 98%;
+	}
+}
+.post{
+	width: 98%;
+	margin: 1%;
+}

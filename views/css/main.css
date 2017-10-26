@@ -23,6 +23,86 @@ body{
                                   supported by Chrome and Opera */
 }
 
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.navLink{
+  color: white;
+}
+.navLink:hover{
+  color: white;
+  text-decoration: none;
+}
+
+
+.navList{
+  height: 50px;
+  list-style-type: none;
+  width: 100%;
+  color: white;
+  background-color: #5CB85C;
+}
+.navItem{
+  float: left;
+  width: 20%;
+  text-align: center;
+  line-height: 50px;
+}
+.navBar{
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
 .greenBack{
   background-color: #5CB85C;
 }
+.mobNavList{
+  display: none;
+}
+.hide{
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .navList{
+    display: none;
+  }
+  .mobNavList{
+    width: 100%;
+    list-style-type: none;
+    display: block;
+  }
+  .mobNavItem{
+    background-color: rgb(92, 184, 92);
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 5px; 
+  }
+  .mobNavLink{
+    color: white;
+  }
+  .mobNavLink:hover{
+    color: white;
+    text-decoration: none;
+  }
+  .dropper{
+    text-align: left;
+    font-size: 1.4rem;
+  }
+  .drop{
+    display: none;
+  }
