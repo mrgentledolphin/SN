@@ -22,7 +22,11 @@ express()
     .use(passport.initialize())
     .use(passport.session())
     .get('/', (req, res, next) => {
-       res.render('index')
+        if(req.isAuthenticated()){
+            res.redirect('/board')
+        } else {
+            res.render('index')
+        }
     })
 
     
@@ -82,7 +86,12 @@ express()
 
     .get('/isa', (req, res, next) => {
         let pass = req.session.passport
-        res.send(req.session)
+        if (req.isAuthenticated()) {
+            res.send(req.session)
+        } else {
+            res.send('not auth')
+        }
+
         /* db('users')
             .where("id", pass.user)
             .first()
